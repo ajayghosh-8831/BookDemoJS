@@ -52,6 +52,5 @@ document.getElementById('error').innerHTML=""
 }
 function Gotosearch()
 {
-    alert('cc')
     window.location="./search.html"
 }
