@@ -28,16 +28,17 @@ document.getElementById('error').innerHTML=""
         bookObj=JSON.parse(localStorage.getItem(searchbookName_val))
        // alert(bookObj.imgurl_val)
         const divname = document.createElement('div')
-        divname.className="col-lg-4 col-md-4 col-sm-6 bg-warning text-white border";
+        divname.className="col-lg-4 col-md-4 col-sm-3 bg-warning text-white border";
         divname.innerHTML=bookObj.bookName_val
         bookDetails.appendChild(divname);
         const divauth = document.createElement('div')
-        divauth.className="col-lg-4 col-md-4 col-sm-6 bg-warning text-white border";
+        divauth.className="col-lg-4 col-md-4 col-sm-3 bg-warning text-white border";
         divauth.innerHTML=bookObj.author_val
         bookDetails.appendChild(divauth);
         const divimage = document.createElement('div')
-        divimage.className="col-lg-4 col-md-4 col-sm-6 bg-warning text-white border";
+        divimage.className="col-lg-4 col-md-3 col-sm-3 bg-warning text-white border";
         const imageval = document.createElement('img')
+        imageval.width="100"
         imageval.src=bookObj.imgurl_val;
         divimage.appendChild(imageval);
         bookDetails.appendChild(divimage);
