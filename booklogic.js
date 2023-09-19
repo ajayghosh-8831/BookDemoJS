@@ -20,6 +20,9 @@ function addBook()
 function searchBook()
 {
     searchbookName_val=searchbookName.value
+const errormsg=document.createElement('h1');
+        errormsg.id="error"
+        errormsg.className="bg-danger"
  const errormsg=document.getElementById('error');
      if(errormsg!=null
      errormsg.innerHTML=""
@@ -46,9 +49,7 @@ function searchBook()
     
     else
     {
-        const errormsg=document.createElement('h1');
-        errormsg.id="error"
-        errormsg.className="bg-danger"
+        
         errormsg.innerHTML="Book Doesn't exist"
         bookDetails.appendChild(errormsg);
     }
