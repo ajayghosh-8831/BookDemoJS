@@ -20,12 +20,8 @@ function addBook()
 function searchBook()
 {
     searchbookName_val=searchbookName.value
-const errormsg=document.createElement('h1');
-        errormsg.id="error"
-        errormsg.className="bg-danger"
- const errormsg=document.getElementById('error');
-     if(errormsg!=null
-     errormsg.innerHTML=""
+
+document.getElementById('error').innerHTML=""
     if(searchbookName_val in localStorage)
     {  
          const maindiv = document.createElement('div')
@@ -50,11 +46,12 @@ const errormsg=document.createElement('h1');
     else
     {
         
-        errormsg.innerHTML="Book Doesn't exist"
-        bookDetails.appendChild(errormsg);
+        document.getElementById('error').innerHTML="Book Doesn't exist"
+
     }
 }
 function Gotosearch()
 {
+    alert('cc')
     window.location="./search.html"
 }
