@@ -20,9 +20,11 @@ function addBook()
 function searchBook()
 {
     searchbookName_val=searchbookName.value
-    if(searchbookName_val in localStorage)
-    {   const errormsg=document.getElementById('error');
+ const errormsg=document.getElementById('error');
+     if(errormsg!=null
      errormsg.innerHTML=""
+    if(searchbookName_val in localStorage)
+    {  
          const maindiv = document.createElement('div')
         bookObj=JSON.parse(localStorage.getItem(searchbookName_val))
        // alert(bookObj.imgurl_val)
